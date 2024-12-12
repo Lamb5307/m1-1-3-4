@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 13.0.0.0 for Windows">
+    <link rel="stylesheet" href="style.css">
+<TITLE>形式言語</TITLE>
+</HEAD>
+<BODY>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1>【　形式言語　】</h1>
+
+<p id="buttom"><strong>表示</strong></p><br>
+日本語や英語など、歴史の中で自然と発生した言語を<p class="di"><b>｢自然言語｣</b></p>といいます。自然言語には、基本的な文法ではありますが、文法に沿わない部分もあるという特徴があります。<br>
+それに対して、プログラム言語など厳格な文法に沿って記述される言語を<p class="di"><b>｢形式言語｣</b></p>といいます。<br>
+
+
+<strong>(1)文脈自由文法</strong><br>
+<p class="di"><b>｢文脈自由文法｣</b></p>とは、プログラム言語を正確に記述するための形式文法のひとつで、”〇〇とは✕✕である”という構文を定義します。<br>
+文脈自由文法で、”円周率とは、3.14...である。”と定義する場合、定義が必要なもの(ここでは”円周率”)を<b>｢非終端記号｣</b>といい、それ以上ほかのものに置き換えることができず定義が必要でないもの(ここでは”3.14...”)を<p class="di"><b>｢終端記号｣</b></p>といいます。<br>
+<strong>(2)BNF</strong><br>
+<p class="di"><b>｢BNF｣</b></p>とは、文脈自由文法自体を定義するための言語のひとつで、<p class="di"><b>｢バッカス・ナウア記述｣</b></p>ともいいます。<br>
+形式文法は厳密に定義されている必要があります。BNFで定義を行うとき、非終端記号は<>で囲み、終端記号はそのまま記載します。また、非終端記号と終端記号を次のような記号を使って関連付けます。<br>
+<P><IMG src="1-1-3-4-1.JPG" width="500" border="0"></P>
+
+<strong>(3)構文図式</strong><br>
+<p class="di"><b>｢構文図式｣</b></p>とは、BNFで定義した構文を視覚的に図で表現したものです。非終端記号は▢、終端記号は◯で表現します。<br>
+構文図式には、次のような記述ルールがあります。<br>
+<P><IMG src="1-1-3-4-2.JPG" width="500" border="0"></P>
+
+    <script>
+        const buttom = document.getElementById('buttom');
+        const diElements = document.querySelectorAll('.di'); // クラスの要素をすべて取得
+    
+        // マウスホバー時
+        buttom.addEventListener('mouseover', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '1';
+            });
+        }, false);
+    
+        // マウスが離れている時
+        buttom.addEventListener('mouseleave', () => {
+            diElements.forEach(di => {
+                di.style.opacity = '0';
+            });
+        }, false);
+    </script>
